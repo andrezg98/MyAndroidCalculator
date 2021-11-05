@@ -27,8 +27,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         operationsComputer = new OperationsComputer();
 
         // To hide the actionBar
-        final ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        if (getSupportActionBar() != null) { getSupportActionBar().hide();}
 
         // Don't show the keyboard
         screen = findViewById(R.id.result);
@@ -38,63 +37,23 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         findViewById(R.id.result).setOnClickListener(this);
         preview = findViewById(R.id.preview_calculation);
 
-        // * Numbers *
-        findViewById(R.id.dot).setOnClickListener(this);
-        findViewById(R.id.zero).setOnClickListener(this);
-        findViewById(R.id.one).setOnClickListener(this);
-        findViewById(R.id.two).setOnClickListener(this);
-        findViewById(R.id.three).setOnClickListener(this);
-        findViewById(R.id.four).setOnClickListener(this);
-        findViewById(R.id.five).setOnClickListener(this);
-        findViewById(R.id.six).setOnClickListener(this);
-        findViewById(R.id.seven).setOnClickListener(this);
-        findViewById(R.id.eight).setOnClickListener(this);
-        findViewById(R.id.nine).setOnClickListener(this);
-
-        // * Operators *
-        findViewById(R.id.mas).setOnClickListener(this);
-        findViewById(R.id.menos).setOnClickListener(this);
-        findViewById(R.id.multiply).setOnClickListener(this);
-        findViewById(R.id.div).setOnClickListener(this);
-        findViewById(R.id.raiz).setOnClickListener(this);
-        findViewById(R.id.percent).setOnClickListener(this);
-        findViewById(R.id.potencia).setOnClickListener(this);
-        findViewById(R.id.equal).setOnClickListener(this);
-        findViewById(R.id.m_mas).setOnClickListener(this);
-        findViewById(R.id.clear).setOnClickListener(this);
-        findViewById(R.id.clear_element).setOnClickListener(this);
-        findViewById(R.id.mr).setOnClickListener(this);
-
-        // * Operators that only exist in layout-vertical (Vertical mode) *
-        if (findViewById(R.id.sign_change) != null) {
-            findViewById(R.id.sign_change).setOnClickListener(this);
+        int[] buttonsListIDs = new int[] {R.id.dot, R.id.zero, R.id.one, R.id.two, R.id.three,
+                                        R.id.four, R.id.five, R.id.six , R.id.seven, R.id.eight, R.id.nine,
+                                        R.id.mas, R.id.menos, R.id.multiply, R.id.div, R.id.raiz, R.id.percent,
+                                         R.id.potencia, R.id.equal, R.id.m_mas, R.id.clear, R.id.clear_element, R.id.mr};
+        for (int buttonID : buttonsListIDs) {
+            findViewById(buttonID).setOnClickListener(this);
         }
 
-        // * Operators that only exist in layout-land (Landscape mode) *
-        if (findViewById(R.id.invert) != null) {
-            findViewById(R.id.invert).setOnClickListener(this);
+        // * Operators that only exist in layout-vertical (Vertical mode) and only in layout-land (Landscape mode) *
+        int[] uniqueButtonsListIDs = new int[] {R.id.sign_change, R.id.squared, R.id.invert, R.id.pi,
+                                                R.id.sin, R.id.cos, R.id.tan, R.id.mc, R.id.m_menos};
+        for (int uniqueButtonID : uniqueButtonsListIDs) {
+            if (findViewById(uniqueButtonID) != null){
+                findViewById(uniqueButtonID).setOnClickListener(this);
+            }
         }
-        if (findViewById(R.id.squared) != null) {
-            findViewById(R.id.squared).setOnClickListener(this);
-        }
-        if (findViewById(R.id.pi) != null) {
-            findViewById(R.id.pi).setOnClickListener(this);
-        }
-        if (findViewById(R.id.sin) != null) {
-            findViewById(R.id.sin).setOnClickListener(this);
-        }
-        if (findViewById(R.id.cos) != null) {
-            findViewById(R.id.cos).setOnClickListener(this);
-        }
-        if (findViewById(R.id.tan) != null) {
-            findViewById(R.id.tan).setOnClickListener(this);
-        }
-        if (findViewById(R.id.mc) != null) {
-            findViewById(R.id.mc).setOnClickListener(this);
-        }
-        if (findViewById(R.id.m_menos) != null) {
-            findViewById(R.id.m_menos).setOnClickListener(this);
-        }
+
     }
 
     @Override
@@ -143,8 +102,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 }
                 Log.d("DEBUG", String.format("CE:  %s, screenNumber: %s, screen: %s",
                         clear_element, operationsComputer.getScreenNumber(), screen.getText().toString()));
-            } catch (NumberFormatException e){
-                //Case when no more input to erase
+            } catch (NumberFormatException e){  //Case when no more input to erase
+
                 screen.setText("");
             }
 
