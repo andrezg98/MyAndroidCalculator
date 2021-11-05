@@ -61,13 +61,13 @@
             app:cornerRadius="30dp" />
 
         <Button
-            android:id="@+id/m"
+            android:id="@+id/mr"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/m"
+            android:text="@string/mr"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:cornerRadius="30dp" />

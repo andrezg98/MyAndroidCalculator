@@ -63,11 +63,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         findViewById(R.id.m_mas).setOnClickListener(this);
         findViewById(R.id.clear).setOnClickListener(this);
         findViewById(R.id.clear_element).setOnClickListener(this);
+        findViewById(R.id.mr).setOnClickListener(this);
 
         // * Operators that only exist in layout-vertical (Vertical mode) *
-        if (findViewById(R.id.m) != null) {
-            findViewById(R.id.m).setOnClickListener(this);
-        }
         if (findViewById(R.id.sign_change) != null) {
             findViewById(R.id.sign_change).setOnClickListener(this);
         }
@@ -93,9 +91,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         }
         if (findViewById(R.id.mc) != null) {
             findViewById(R.id.mc).setOnClickListener(this);
-        }
-        if (findViewById(R.id.mr) != null) {
-            findViewById(R.id.mr).setOnClickListener(this);
         }
         if (findViewById(R.id.m_menos) != null) {
             findViewById(R.id.m_menos).setOnClickListener(this);
@@ -136,8 +131,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     clear_element = String.valueOf((int) operationsComputer.getScreenNumber());
                     operationsComputer.setScreenNumber(Double.parseDouble(clear_element.substring(0, clear_element.length() - 1)));
                     screen.setText(String.valueOf((int) operationsComputer.getScreenNumber()));
-                    Log.d("DEBUG", String.format("CE:  %s, screenNumber: %s, screen: %s",
-                            clear_element, operationsComputer.getScreenNumber(), screen.getText().toString()));
                 } else {
                     clear_element = String.valueOf(operationsComputer.getScreenNumber());
                     double new_element = Double.parseDouble(clear_element.substring(0, clear_element.length() - 1));
@@ -147,25 +140,28 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     } else {
                         screen.setText(String.valueOf(operationsComputer.getScreenNumber()));
                     }
-                        Log.d("DEBUG", String.format("CE:  %s, screenNumber: %s, screen: %s",
-                                clear_element, operationsComputer.getScreenNumber(), screen.getText().toString()));
                 }
+                Log.d("DEBUG", String.format("CE:  %s, screenNumber: %s, screen: %s",
+                        clear_element, operationsComputer.getScreenNumber(), screen.getText().toString()));
             } catch (NumberFormatException e){
                 //Case when no more input to erase
-                screen.setText("0");
+                screen.setText("");
             }
 
             isWritingNumber = true;
         } else {
-            if (isWritingNumber) {
-                operationsComputer.setScreenNumber(Double.parseDouble(screen.getText().toString()));
-                isWritingNumber = false;
-            }
-            operationsComputer.computeOperation(btnPressed);
-            if (operationsComputer.getResult() % 1 == 0) {
-                screen.setText(String.valueOf((int) operationsComputer.getResult()));
-            } else {
-                screen.setText(String.valueOf(operationsComputer.getResult()));
+            try {
+                if (isWritingNumber) {
+                    operationsComputer.setScreenNumber(Double.parseDouble(screen.getText().toString()));
+                    isWritingNumber = false;
+                }
+                operationsComputer.computeOperation(btnPressed);
+                if (operationsComputer.getResult() % 1 == 0) {
+                    screen.setText(String.valueOf((int) operationsComputer.getResult()));
+                } else {
+                    screen.setText(String.valueOf(operationsComputer.getResult()));
+                }
+            } catch (NumberFormatException ignored) {
             }
         }
     }
