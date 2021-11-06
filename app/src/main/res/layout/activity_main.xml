@@ -31,7 +31,7 @@
         android:layout_gravity="center|right"
         android:text="@string/screen"
         android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="32sp"
         android:textAlignment="textEnd"
         android:background="@color/green_screen"
         android:layout_marginTop="0dp"
@@ -57,7 +57,7 @@
             android:backgroundTint="@color/white"
             android:text="@string/m_mas"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="17sp"
             app:cornerRadius="30dp" />
 
         <Button
@@ -69,7 +69,7 @@
             android:backgroundTint="@color/white"
             android:text="@string/mr"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:cornerRadius="30dp" />
 
         <Button
@@ -81,7 +81,7 @@
             android:backgroundTint="@color/white"
             android:text="@string/ce"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:cornerRadius="30dp" />
 
         <Button
@@ -93,7 +93,7 @@
             android:backgroundTint="@color/white"
             android:text="@string/c"
             android:textColor="#FF0000"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:cornerRadius="30dp" />
 
         <Button
