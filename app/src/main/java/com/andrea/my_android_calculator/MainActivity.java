@@ -16,6 +16,8 @@ import java.util.List;
 
 /**
  * TODO: Before start using the application, please read the README.md file first.
+ * GitHub Repo: https://github.com/andrezg98/MyAndroidCalculator
+ * Author: Andrea Ziqing Gallardo Bendito
  */
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {

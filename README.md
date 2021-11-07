@@ -1,5 +1,5 @@
 # 📱 MyAndroidCalculator - Project 1. Android Programming <img align="right" alt="GIF" src="https://github.com/andrezg98/MyAndroidCalculator/blob/master/app/src/main/res/mipmap-xhdpi/logo_foreground.png"/>
-
+Author: Andrea Ziqing Gallardo Bendito
 To start using the application, please note the following points:
 
 ## 🔃 **Vertical Mode**
