@@ -1,4 +1,4 @@
-package com.example.my_android_calculator;
+package com.andrea.my_android_calculator;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,10 @@ import android.view.View.OnClickListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+/**
+ * TODO: Before start using the application, please read the README.md file first.
+ */
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
@@ -244,6 +248,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     // * USEFUL FUNCTIONS *
 
+    /**
+     * UpdateScreenText helps to insert a number wherever you want in the EditText.
+     * @param newNumber Number to insert
+     */
     private void updateScreenText(String newNumber) {
         int cursorPos = screen.getSelectionStart();
 
@@ -254,5 +262,4 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         // Update the new string text
         screen.setText(String.format("%s%s%s", leftNumber, newNumber, rightNumber));
     }
-
 }

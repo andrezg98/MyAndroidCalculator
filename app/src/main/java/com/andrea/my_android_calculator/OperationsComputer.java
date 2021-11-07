@@ -1,7 +1,10 @@
-package com.example.my_android_calculator;
+package com.andrea.my_android_calculator;
 
 import androidx.annotation.NonNull;
 
+/**
+ * This class compute the operations of the calculator and helps with the memory storage.
+ */
 public class OperationsComputer {
     private double screenNumber;
     private double result;
@@ -19,6 +22,11 @@ public class OperationsComputer {
         operationPreview = "";
     }
 
+    /**
+     * Performs the relevant operation with the number displayed on the screen according
+     * to the operator passed as a parameter.
+     * @param op operator
+     */
     protected void computeOperation(String op) {
         switch (op) {
             case "%":
@@ -73,7 +81,9 @@ public class OperationsComputer {
         }
     }
 
-    // Waiting the next operand to calculate the result
+    /**
+     * Waiting the next operand to calculate the final result.
+     */
     private void computeBufferOperation() {
         switch (bufferOperator) {
             case "+":

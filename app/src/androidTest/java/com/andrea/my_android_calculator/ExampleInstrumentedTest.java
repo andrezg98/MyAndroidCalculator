@@ -1,4 +1,4 @@
-package com.example.my_android_calculator;
+package com.andrea.my_android_calculator;
 
 import android.content.Context;
 
