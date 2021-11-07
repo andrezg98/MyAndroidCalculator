@@ -13,11 +13,11 @@
         android:id="@+id/preview_calculation"
         android:layout_width="match_parent"
         android:layout_height="20dp"
+        android:layout_weight="0.25"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="30dp"
-        android:layout_weight="0.25"
+        android:padding="@dimen/padding"
         android:background="@color/green_screen"
-        android:padding="10dp"
         android:text=""
         android:textAlignment="textEnd"
         android:textColor="@color/black"
@@ -28,19 +28,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_gravity="center|right"
+        android:layout_marginBottom="30sp"
+        android:layout_marginHorizontal="10dp"
+        android:padding="@dimen/padding"
+        android:background="@color/green_screen"
         android:text="@string/screen"
         android:textColor="@color/black"
         android:textSize="32sp"
         android:textAlignment="textEnd"
-        android:background="@color/green_screen"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="30sp"
-        android:layout_marginHorizontal="10dp"
-        android:padding="10dp"
-        android:autofillHints="false"
-        android:inputType="none"
-        tools:ignore="RtlCompat"/>
+        android:importantForAutofill="no"
+        android:inputType="number"
+        tools:ignore="LabelFor" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -49,16 +47,17 @@
         android:weightSum="5">
 
         <Button
-            android:id="@+id/m_mas"
+            android:id="@+id/m_add"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/m_mas"
+            android:text="@string/m_add"
             android:textColor="@color/black"
-            android:textSize="17sp"
-            app:cornerRadius="30dp" />
+            android:textSize="@dimen/buttonText"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/mr"
@@ -69,8 +68,9 @@
             android:backgroundTint="@color/white"
             android:text="@string/mr"
             android:textColor="@color/black"
-            android:textSize="17sp"
-            app:cornerRadius="30dp" />
+            android:textSize="@dimen/buttonText"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/clear_element"
@@ -81,8 +81,9 @@
             android:backgroundTint="@color/white"
             android:text="@string/ce"
             android:textColor="@color/black"
-            android:textSize="17sp"
-            app:cornerRadius="30dp" />
+            android:textSize="@dimen/buttonText"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/clear"
@@ -90,23 +91,26 @@
             android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/button_red"
             android:text="@string/c"
-            android:textColor="#FF0000"
-            android:textSize="17sp"
-            app:cornerRadius="30dp" />
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/buttonText"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle"/>
 
         <Button
-            android:id="@+id/potencia"
+            android:id="@+id/pot"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/potencia"
-            android:textColor="#FF0000"
-            android:textSize="25sp"
-            app:cornerRadius="30dp" />
+            android:text="@string/pot"
+            android:textColor="@color/red"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>
 
@@ -125,9 +129,10 @@
             android:backgroundTint="@color/white"
             android:text="@string/_7"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/eight"
@@ -138,9 +143,10 @@
             android:backgroundTint="@color/white"
             android:text="@string/_8"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/nine"
@@ -151,33 +157,36 @@
             android:backgroundTint="@color/white"
             android:text="@string/_9"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
-            android:id="@+id/mas"
+            android:id="@+id/add"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/mas"
-            android:textColor="#FF0000"
-            android:textSize="30sp"
-            app:cornerRadius="30dp" />
+            android:text="@string/add"
+            android:textColor="@color/red"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
-            android:id="@+id/menos"
+            android:id="@+id/subtract"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/menos"
-            android:textColor="#FF0000"
-            android:textSize="30sp"
-            app:cornerRadius="30dp" />
+            android:text="@string/subtract"
+            android:textColor="@color/red"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>
 
@@ -196,9 +205,10 @@
             android:backgroundTint="@color/white"
             android:text="@string/_4"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/five"
@@ -209,9 +219,10 @@
             android:backgroundTint="@color/white"
             android:text="@string/_5"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/six"
@@ -222,9 +233,10 @@
             android:backgroundTint="@color/white"
             android:text="@string/_6"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/div"
@@ -234,9 +246,10 @@
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:text="@string/div"
-            android:textColor="#FF0000"
-            android:textSize="30sp"
-            app:cornerRadius="30dp" />
+            android:textColor="@color/red"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/multiply"
@@ -246,9 +259,10 @@
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:text="@string/multiply"
-            android:textColor="#FF0000"
-            android:textSize="30sp"
-            app:cornerRadius="30dp" />
+            android:textColor="@color/red"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>
 
@@ -267,9 +281,10 @@
             android:backgroundTint="@color/white"
             android:text="@string/_1"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/two"
@@ -280,9 +295,10 @@
             android:backgroundTint="@color/white"
             android:text="@string/_2"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/three"
@@ -293,21 +309,23 @@
             android:backgroundTint="@color/white"
             android:text="@string/_3"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
-            android:id="@+id/raiz"
+            android:id="@+id/root"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:text="@string/square"
-            android:textColor="#FF0000"
-            android:textSize="30sp"
-            app:cornerRadius="30dp" />
+            android:textColor="@color/red"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/percent"
@@ -317,9 +335,10 @@
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:text="@string/percent"
-            android:textColor="#FF0000"
-            android:textSize="30sp"
-            app:cornerRadius="30dp" />
+            android:textColor="@color/red"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>
 
@@ -338,9 +357,10 @@
             android:backgroundTint="@color/white"
             android:text="@string/_0"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/dot"
@@ -351,8 +371,9 @@
             android:backgroundTint="@color/white"
             android:text="@string/coma"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            app:cornerRadius="30dp" />
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/sign_change"
@@ -362,21 +383,24 @@
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:text="@string/mas_menos"
-            android:textColor="#FF0000"
-            android:textSize="18sp"
-            app:cornerRadius="30dp" />
+            android:textColor="@color/red"
+            android:textSize="@dimen/buttonText"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/equal"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:layout_weight="2"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/button_red"
             android:text="@string/equal"
+            android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            app:cornerRadius="30dp" />
+            android:textSize="@dimen/buttonOperatorsAndNumbers"
+            app:cornerRadius="@dimen/cornerRadius"
+            style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>
 

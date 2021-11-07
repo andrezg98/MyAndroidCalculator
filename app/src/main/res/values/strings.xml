@@ -1,27 +1,27 @@
 <resources>
     <string name="app_name">MyAndroidCalculator</string>
-    <string name="m_mas">M+</string>
+    <string name="m_add">M+</string>
     <string name="ce">CE</string>
     <string name="c">C</string>
     <string name="_7">7</string>
     <string name="_8">8</string>
     <string name="_9">9</string>
-    <string name="mas">+</string>
+    <string name="add">+</string>
     <string name="_4">4</string>
     <string name="_5">5</string>
     <string name="_6">6</string>
-    <string name="menos">-</string>
+    <string name="subtract">-</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
     <string name="_3">3</string>
     <string name="div">÷</string>
     <string name="_0">0</string>
     <string name="coma">.</string>
-    <string name="multiply">*</string>
+    <string name="multiply">×</string>
     <string name="equal">=</string>
     <string name="square">√</string>
     <string name="percent">%</string>
-    <string name="potencia">^</string>
+    <string name="pot">^</string>
     <string name="mas_menos">+/-</string>
     <string name="screen">MyAndroidCalculator</string>
     <string name="invert">1/x</string>
@@ -31,6 +31,6 @@
     <string name="mr">MR</string>
     <string name="sin">SIN</string>
     <string name="cos">COS</string>
-    <string name="m_menos">M-</string>
+    <string name="m_subtract">M-</string>
     <string name="tan">TAN</string>
 </resources>

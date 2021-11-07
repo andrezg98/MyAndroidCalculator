@@ -61,6 +61,7 @@ public class OperationsComputer {
                 break;
             case "MR":
                 screenNumber = memoryNumber;
+                setResult(screenNumber);
                 break;
             default:
                 computeBufferOperation();
@@ -81,12 +82,14 @@ public class OperationsComputer {
             case "-":
                 screenNumber = bufferNumber - screenNumber;
                 break;
-            case "*":
+            case "×":
                 screenNumber = bufferNumber * screenNumber;
                 break;
             case "÷":
                 if (screenNumber != 0) {
                     screenNumber = bufferNumber / screenNumber;
+                } else {
+                    screenNumber = Double.POSITIVE_INFINITY;
                 }
                 break;
             case "√":
@@ -108,7 +111,7 @@ public class OperationsComputer {
         }
     }
 
-    // * Setters and Getters *
+    // * Setters, Getters and more *
     public void setScreenNumber(double number) { screenNumber = number; }
     public double getScreenNumber() { return screenNumber; }
 

@@ -10,4 +10,6 @@
     <color name="dark_grey">#2A3137</color>
     <color name="green_screen">#8FD1A0</color>
     <color name="clear_gray">#414142</color>
+    <color name="red">#FF0000</color>
+    <color name="button_red">#EFBDBD</color>
 </resources>
