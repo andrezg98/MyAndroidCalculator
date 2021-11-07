@@ -15,7 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * TODO: Before start using the application, please read the README.md file first.
+ * TODO: Before start using the application, please read the README.md file first (you can find it in the Project Files).
  * GitHub Repo (private): https://github.com/andrezg98/MyAndroidCalculator
  * Author: Andrea Ziqing Gallardo Bendito
  */
