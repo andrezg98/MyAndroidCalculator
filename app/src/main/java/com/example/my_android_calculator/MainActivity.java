@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 R.id.four, R.id.five, R.id.six , R.id.seven, R.id.eight, R.id.nine,
                 // Common Operators
                 R.id.add, R.id.subtract, R.id.multiply, R.id.div, R.id.root, R.id.percent,
-                R.id.pot, R.id.equal, R.id.m_add, R.id.clear, R.id.clear_element, R.id.mr
+                R.id.power, R.id.equal, R.id.m_add, R.id.clear, R.id.clear_element, R.id.mr
         };
 
         for (int buttonID : buttonsListIDs) {
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         int[] uniqueButtonsListIDs = new int[] {
                 // Operator that only exist in layout-vertical (Vertical mode)
-                R.id.sign_change,
+                R.id.signe_change,
                 // Operators that only exist in layout-land (Landscape mode)
                 R.id.squared, R.id.invert, R.id.pi, R.id.sin, R.id.cos,
                 R.id.tan, R.id.mc, R.id.m_subtract};

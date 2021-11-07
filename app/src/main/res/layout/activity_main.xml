@@ -100,13 +100,13 @@
             style="?android:attr/buttonBarButtonStyle"/>
 
         <Button
-            android:id="@+id/pot"
+            android:id="@+id/power"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/pot"
+            android:text="@string/power"
             android:textColor="@color/red"
             android:textSize="@dimen/buttonOperatorsAndNumbers"
             app:cornerRadius="@dimen/cornerRadius"
@@ -376,13 +376,13 @@
             style="?android:attr/buttonBarButtonStyle" />
 
         <Button
-            android:id="@+id/sign_change"
+            android:id="@+id/signe_change"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/mas_menos"
+            android:text="@string/signe_change"
             android:textColor="@color/red"
             android:textSize="@dimen/buttonText"
             app:cornerRadius="@dimen/cornerRadius"

@@ -21,8 +21,8 @@
     <string name="equal">=</string>
     <string name="square">√</string>
     <string name="percent">%</string>
-    <string name="pot">^</string>
-    <string name="mas_menos">+/-</string>
+    <string name="power">^</string>
+    <string name="signe_change">+/-</string>
     <string name="screen">MyAndroidCalculator</string>
     <string name="invert">1/x</string>
     <string name="pi">Π</string>
