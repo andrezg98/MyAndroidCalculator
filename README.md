@@ -1,5 +1,8 @@
-# 📱 MyAndroidCalculator - Project 1. Android Programming <img align="right" alt="GIF" src="https://github.com/andrezg98/MyAndroidCalculator/blob/master/app/src/main/res/mipmap-xhdpi/logo_foreground.png"/>
-Author: Andrea Ziqing Gallardo Bendito
+# 📱 MyAndroidCalculator <img align="right" alt="GIF" src="https://github.com/andrezg98/MyAndroidCalculator/blob/master/app/src/main/res/mipmap-xhdpi/logo_foreground.png"/>
+Author: _Andrea Ziqing Gallardo Bendito_
+
+This repository contains the code implemented to develop a calculator as a mobile application.
+
 To start using the application, please note the following points:
 
 ## 🔃 **Vertical Mode**
