@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         int[] uniqueButtonsListIDs = new int[] {
                 // Operator that only exist in layout-vertical (Vertical mode)
-                R.id.signe_change,
+                R.id.sign_change,
                 // Operators that only exist in layout-land (Landscape mode)
                 R.id.squared, R.id.invert, R.id.pi, R.id.sin, R.id.cos,
                 R.id.tan, R.id.mc, R.id.m_subtract};

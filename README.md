@@ -20,7 +20,7 @@ In this view you may work with the basic buttons of a calculator. ⚠️ Please,
   - `×` → **MULTIPLY**: _firstNumber_ `×` _secondNumber_ `=`
   - `√` → **SQUARE ROOT**: `√` _Number_ `=`
   - `%` → **PERCENT**: _Number_ → `%`
-  - `+/-` → **SIGNE CHANGE**: _Number_ → `+/-`
+  - `+/-` → **SIGN CHANGE**: _Number_ → `+/-`
 ## 🔁 **Landscape Mode**
 This view corresponds to a scientific calculator. ⚠️ Buttons to pay special attention:
   - `MC` → **MEMORY CLEAR**: Deletes any number stored in memory.
