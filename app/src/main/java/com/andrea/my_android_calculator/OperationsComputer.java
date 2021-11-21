@@ -1,5 +1,7 @@
 package com.andrea.my_android_calculator;
 
+import android.annotation.SuppressLint;
+
 import androidx.annotation.NonNull;
 
 /**
@@ -84,6 +86,7 @@ public class OperationsComputer {
     /**
      * Waiting the next operand to calculate the final result.
      */
+    @SuppressLint("DefaultLocale")
     private void computeBufferOperation() {
         switch (bufferOperator) {
             case "+":
@@ -114,9 +117,13 @@ public class OperationsComputer {
                 break;
             case "COS":
                 screenNumber = Math.cos(Math.toRadians(screenNumber));
+                screenNumber = Double.parseDouble(String.format("%.6f", screenNumber));
                 break;
             case "TAN":
-                screenNumber = Math.tan(Math.toRadians(screenNumber));
+                double sin = Math.sin(Math.toRadians(screenNumber));
+                double cos = Math.cos(Math.toRadians(screenNumber));
+                cos = Double.parseDouble(String.format("%.6f", cos));
+                screenNumber = sin / cos;
                 break;
         }
     }

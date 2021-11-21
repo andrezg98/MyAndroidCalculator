@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAndroidCalculator">
-        <activity android:name="com.andrea.my_android_calculator.MainActivity">
+        <activity android:name="com.andrea.my_android_calculator.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
